@@ -1,9 +1,14 @@
 packages/*/package-lock.json
 sample/**/package-lock.json
-package-lock.json
 
 # dependencies
 node_modules/
+
+# dist
+/dist
+
+# env
+*.env
 
 # IDE
 /.idea
