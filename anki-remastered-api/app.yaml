@@ -1,0 +1,21 @@
+runtime: nodejs20
+instance_class: F1
+
+automatic_scaling:
+  target_cpu_utilization: 0.75
+  min_instances: 1
+  max_instances: 2
+
+entrypoint: npm run start
+
+env_variables:
+  NODE_ENV: "production"
+  PORT: "8080"
+  DB_USERNAME: "{{secret:DB_USERNAME}}"
+  DB_PASSWORD: "{{secret:DB_PASSWORD}}"
+  DB_DATABASE: "{{secret:DB_DATABASE}}"
+  DB_INSTANCE_CONNECTION_NAME: "{{secret:DB_INSTANCE_CONNECTION_NAME}}"
+
+handlers:
+  - url: /.*
+    script: auto
