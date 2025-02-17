@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@google-cloud/cloud-sql-connector": "^1.6.0",
+    "@google-cloud/secret-manager": "^5.6.0",
     "@nestjs/common": "^11.0.7",
     "@nestjs/config": "^4.0.0",
     "@nestjs/platform-express": "^11.0.8",
@@ -30,6 +31,7 @@
     "@nestjs/typeorm": "^11.0.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
+    "pg": "^8.13.3",
     "uuid": "^11.0.5"
   }
 }
